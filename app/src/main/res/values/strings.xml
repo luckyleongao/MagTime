@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MagTime</string>
+    <string name="home_fragment">Home</string>
+    <string name="search_fragment">Search</string>
+    <string name="shelf_fragment">Shelf</string>
+    <string name="setting_fragment">Setting</string>
+
+    <string name="home_dest">首页</string>
+    <string name="search_dest">搜索</string>
+    <string name="shelf_dest">书架</string>
+    <string name="setting_dest">我的</string>
+
+    <string name="search_default_hint">搜索杂志或文章</string>
+
+    <string name="detail_sameMag">往期杂志</string>
+    <string name="home_getAll">查看全部</string>
+
+    <string name="favorite_delete">删除</string>
+    <string name="favorite_done">完成</string>
+
+    <string name="network_unknown">未知网络</string>
+    <string name="network_not_exist">无网络</string>
+
+    <string name="search_history">历史搜索</string>
+    <string name="not_found">未搜索到结果</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

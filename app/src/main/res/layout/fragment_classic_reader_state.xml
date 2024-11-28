@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:alpha="0.4"
+    android:background="#000000" >
+
+    <TextView
+        android:id="@+id/page_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/hello_blank_fragment"
+        android:textColor="#ffffff" />
+
+    <View 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    
+    <TextView
+        android:id="@+id/net_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/time_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="#ffffff" />
+
+    <ImageView
+        android:id="@+id/power_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="6dp"
+        android:gravity="center_vertical|start"
+        android:scaleType="matrix"
+        android:background="@drawable/battery_bg"
+        android:src="@drawable/battery_fill"  />
+
+</LinearLayout>

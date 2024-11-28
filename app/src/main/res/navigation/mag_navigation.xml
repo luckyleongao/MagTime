@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mag_navigation"
+    app:startDestination="@+id/home_dest">
+
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="com.leongao.magtime.home.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_dest_to_searchBlockFragment"
+            app:destination="@id/searchBlockFragment"
+            app:popUpTo="@id/home_dest" />
+        <action
+            android:id="@+id/action_home_dest_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/search_dest"
+        android:name="com.leongao.magtime.search.ui.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search_dest_to_searchBlockFragment"
+            app:destination="@id/searchBlockFragment"
+            app:popUpTo="@id/search_dest"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_search_dest_to_searchHistoryFragment"
+            app:destination="@id/searchHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shelf_dest"
+        android:name="com.leongao.magtime.shelf.ui.ShelfFragment"
+        android:label="fragment_shelf"
+        tools:layout="@layout/fragment_shelf" >
+        <action
+            android:id="@+id/action_shelf_dest_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setting_dest"
+        android:name="com.leongao.magtime.setting.ui.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_movie_list" >
+        <action
+            android:id="@+id/action_setting_dest_to_movieDetail"
+            app:destination="@id/movieDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchBlockFragment"
+        android:name="com.leongao.magtime.search.ui.SearchBlockFragment"
+        android:label="fragment_search_block"
+        tools:layout="@layout/fragment_search_block" >
+        <argument
+            android:name="blockId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_searchBlockFragment_to_detailFragment"
+            app:destination="@id/detailFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.leongao.magtime.detail.ui.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="magId"
+            app:argType="integer" />
+        <argument
+            android:name="magName"
+            app:argType="string" />
+        <argument
+            android:name="magPubDate"
+            app:argType="string" />
+        <argument
+            android:name="magCoverImgUrl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailFragment_to_classicReaderFragment"
+            app:destination="@id/classicReaderFragment" />
+        <argument
+            android:name="transitionName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/classicReaderFragment"
+        android:name="com.leongao.magtime.reader.ui.ClassicReaderFragment"
+        android:label="fragment_classic_reader"
+        tools:layout="@layout/fragment_classic_reader">
+    <argument
+        android:name="magId"
+        app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.leongao.magtime.shelf.ui.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="com.leongao.magtime.shelf.ui.DownloadFragment"
+        android:label="fragment_download"
+        tools:layout="@layout/fragment_download" />
+    <fragment
+        android:id="@+id/movieDetail"
+        android:name="com.leongao.magtime.setting.ui.MovieDetail"
+        android:label="MovieDetail"
+        tools:layout="@layout/fragment_movie_detail"/>
+    <fragment
+        android:id="@+id/searchHistoryFragment"
+        android:name="com.leongao.magtime.search.ui.SearchHistoryFragment"
+        android:label="fragment_search_history"
+        tools:layout="@layout/fragment_search_history" >
+        <action
+            android:id="@+id/action_searchHistoryFragment_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.leongao.magtime.search.ui.SearchResultFragment"
+        android:label="fragment_search_result"
+        tools:layout="@layout/fragment_search_result" >
+        <action
+            android:id="@+id/action_searchResultFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+</navigation>
